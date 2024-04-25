@@ -4,6 +4,9 @@ import java.util.List;
 
 public class arrays {
     public static void main(String[] args) {
+
+        System.out.println("Merhaba Dünya!");
+
         int[] arrays = new int[5];
         arrays[0]=10;
         arrays[1]=20;
