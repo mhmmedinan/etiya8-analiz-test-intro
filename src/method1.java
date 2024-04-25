@@ -3,6 +3,7 @@ import java.util.List;
 
 public class method1 {
     private static List<String> kitaplar = new ArrayList<>();
+    private static List<String> products = new ArrayList<>();
     public static void main(String[] args) {
           sayHello();
           cikar();
@@ -15,6 +16,15 @@ public class method1 {
           kitapEkle("Java Programlama");
           kitapEkle("Spring Boot Eğitim Kitabı");
           kitapListele();
+
+        System.out.println("--------------------------------");
+
+        addProduct("Tablet");
+        addProduct("Laptop");
+        getProduct();
+        deleteProduct("Tablet");
+        getProduct();
+
     }
 
 
@@ -60,6 +70,28 @@ public class method1 {
     // işlemini yapan metodlar yazalım.
 
 
+
+    //addProduct => camelCase
+    public static void addProduct(String productName){
+        products.add(productName);
+        System.out.println(productName + " listeye eklendi");
+    }
+
+    public static void getProduct(){
+        System.out.println("Ürün listesi : ");
+        for (String product:products){
+            System.out.println(product);
+        }
+    }
+
+    public static void deleteProduct(String productName){
+        if(products.remove(productName)){
+            System.out.println(productName + " ürünü listeden silindi");
+        }
+        else{
+            System.out.println("Bu ürün listede bulunamadı");
+        }
+    }
 
 
 
