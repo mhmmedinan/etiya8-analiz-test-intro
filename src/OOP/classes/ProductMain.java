@@ -1,6 +1,5 @@
-package OOP;
+package OOP.classes;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ProductMain {

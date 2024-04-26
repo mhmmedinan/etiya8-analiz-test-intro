@@ -1,5 +1,7 @@
+package controlStatements;
+
 import java.util.Scanner;
-public class controlStatement {
+public class ControlStatement {
     public static void main(String[] args)
     {
         int number1=30;

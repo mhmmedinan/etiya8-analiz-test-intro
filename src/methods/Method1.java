@@ -1,7 +1,9 @@
+package methods;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class method1 {
+public class Method1 {
     private static List<String> kitaplar = new ArrayList<>();
     private static List<String> products = new ArrayList<>();
     public static void main(String[] args) {

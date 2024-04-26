@@ -1,8 +1,10 @@
+package arrays;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class arrays {
+public class Arrays {
     public static void main(String[] args) {
 
         System.out.println("Merhaba Dünya!");
