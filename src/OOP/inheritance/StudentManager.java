@@ -1,5 +1,9 @@
 package OOP.inheritance;
 
+import OOP.polymorfizm.DatabaseLogger;
+import OOP.polymorfizm.FileLogger;
+import OOP.polymorfizm.Logger;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -7,8 +11,10 @@ import java.util.List;
 
 public class StudentManager {
     private List<Student> students;
+    private Logger logger;
 
     public StudentManager(){
+        logger= new DatabaseLogger();
         students = new ArrayList<>();
        Student student = new Student();
        student.setId(1);
@@ -26,6 +32,7 @@ public class StudentManager {
     }
 
     public void add(Student student){
+        logger.log(student.getFirstName() + " " + student.getLastName());
         student.setCreatedDate(LocalDateTime.now());
         students.add(student);
     }
