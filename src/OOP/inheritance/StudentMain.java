@@ -1,13 +1,18 @@
 package OOP.inheritance;
 
+import OOP.polymorfizm.DatabaseLogger;
+import OOP.polymorfizm.FileLogger;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
 public class StudentMain {
     public static void main(String[] args) {
-        StudentManager studentManager = new StudentManager();
+        StudentManager studentManager = new StudentManager(new DatabaseLogger());
         List<Student> responses = studentManager.getAll();
+
+        User user = new Student();
 
 
         Student student1 = new Student();

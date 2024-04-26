@@ -13,8 +13,8 @@ public class StudentManager {
     private List<Student> students;
     private Logger logger;
 
-    public StudentManager(){
-        logger= new DatabaseLogger();
+    public StudentManager(Logger logger){
+        this.logger= logger;
         students = new ArrayList<>();
        Student student = new Student();
        student.setId(1);
