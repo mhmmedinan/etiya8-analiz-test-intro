@@ -1,5 +1,7 @@
 package OOP.inheritance;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class StudentMain {
@@ -15,6 +17,7 @@ public class StudentMain {
         student1.setEmail("kubilay@hotmail.com");
         student1.setAbout("Qa Tester");
 
+
         studentManager.add(student1);
 
         for (Student student : responses) {
@@ -22,6 +25,7 @@ public class StudentMain {
                     student.getFirstName() + " " + student.getLastName());
             System.out.println("Email bilgisi : " + student.getEmail());
             System.out.println("Hakkında : " + student.getAbout());
+            System.out.println("Sisteme kayıt tarihi : " + student.getCreatedDate());
         }
 
 

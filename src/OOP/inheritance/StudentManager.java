@@ -1,5 +1,7 @@
 package OOP.inheritance;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +16,7 @@ public class StudentManager {
        student.setLastName("Bayraktar");
        student.setEmail("melodi@hotmail.com");
        student.setAbout("Qa Tester");
+       student.setCreatedDate(LocalDateTime.now());
 
        students.add(student);
     }
@@ -23,6 +26,7 @@ public class StudentManager {
     }
 
     public void add(Student student){
+        student.setCreatedDate(LocalDateTime.now());
         students.add(student);
     }
 
