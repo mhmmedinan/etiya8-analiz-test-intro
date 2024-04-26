@@ -1,5 +1,6 @@
 package OOP.inheritance;
 
+import OOP.interfaces.abstracts.StudentRepository;
 import OOP.polymorfizm.DatabaseLogger;
 import OOP.polymorfizm.FileLogger;
 import OOP.polymorfizm.Logger;
@@ -12,9 +13,11 @@ import java.util.List;
 public class StudentManager {
     private List<Student> students;
     private Logger logger;
+    private StudentRepository studentRepository;
 
-    public StudentManager(Logger logger){
+    public StudentManager(Logger logger,StudentRepository studentRepository){
         this.logger= logger;
+        this.studentRepository=studentRepository;
         students = new ArrayList<>();
        Student student = new Student();
        student.setId(1);
@@ -35,6 +38,10 @@ public class StudentManager {
         logger.log(student.getFirstName() + " " + student.getLastName());
         student.setCreatedDate(LocalDateTime.now());
         students.add(student);
+    }
+
+    public void add2(Student student){
+        studentRepository.add(student);
     }
 
 

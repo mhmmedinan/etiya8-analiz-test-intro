@@ -1,5 +1,8 @@
 package OOP.inheritance;
 
+import OOP.interfaces.concretes.Hibernate.HbStudentRepository;
+import OOP.interfaces.concretes.inmemory.ImStudentRepository;
+import OOP.interfaces.genericrepositories.InMemoryBaseRepository;
 import OOP.polymorfizm.DatabaseLogger;
 import OOP.polymorfizm.FileLogger;
 
@@ -9,7 +12,7 @@ import java.util.List;
 
 public class StudentMain {
     public static void main(String[] args) {
-        StudentManager studentManager = new StudentManager(new DatabaseLogger());
+        StudentManager studentManager = new StudentManager(new DatabaseLogger(),new ImStudentRepository());
         List<Student> responses = studentManager.getAll();
 
         User user = new Student();
@@ -32,6 +35,8 @@ public class StudentMain {
             System.out.println("Hakkında : " + student.getAbout());
             System.out.println("Sisteme kayıt tarihi : " + student.getCreatedDate());
         }
+
+        studentManager.add2(student1);
 
 
     }
